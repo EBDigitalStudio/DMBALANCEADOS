@@ -1,0 +1,406 @@
+/* ==========================================================================
+   DMBALANCEADOS - Estilos Específicos de Productos (css/productos.css)
+   Paleta principal: Verde (#395F0A) y Blanco (#FFFFFF)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Banner / Header de la Página de Productos
+   -------------------------------------------------------------------------- */
+.dm-products-header {
+  background: linear-gradient(135deg, #F8FAF5 0%, #FFFFFF 50%, #EDF4E7 100%);
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--dm-border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.dm-products-header::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(57, 95, 10, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dm-products-header .page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--dm-primary-soft);
+  color: var(--dm-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.85rem;
+}
+
+.dm-products-header h1 {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.dm-products-header p {
+  color: #4B5563;
+  font-size: 1.05rem;
+  max-width: 680px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Barra de Filtros / Categorías Rápidas
+   -------------------------------------------------------------------------- */
+.dm-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dm-filter-btn {
+  background-color: #FFFFFF;
+  color: #374151;
+  border: 1px solid var(--dm-border-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.45rem 1.15rem;
+  border-radius: 50px;
+  transition: var(--dm-transition);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dm-filter-btn:hover {
+  background-color: var(--dm-primary-soft);
+  color: var(--dm-primary);
+  border-color: var(--dm-primary-light);
+}
+
+.dm-filter-btn.active {
+  background-color: var(--dm-primary);
+  color: #FFFFFF;
+  border-color: var(--dm-primary);
+  box-shadow: 0 4px 12px var(--dm-primary-glow);
+}
+
+/* --------------------------------------------------------------------------
+   3. Tarjeta de Producto (Product Card)
+   -------------------------------------------------------------------------- */
+.dm-product-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--dm-border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s ease;
+  position: relative;
+}
+
+.dm-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(57, 95, 10, 0.12);
+  border-color: var(--dm-primary-light);
+}
+
+/* Insignia de Categoría flotante */
+.dm-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  color: var(--dm-primary);
+  border: 1px solid var(--dm-border-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor Fijo de la Imagen */
+.dm-card-img-wrapper {
+  height: 240px;
+  width: 100%;
+  background-color: #FBFDF9;
+  border-bottom: 1px solid #EEF2EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen del producto: Fija, Contain y Uniforme */
+.dm-card-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+}
+
+.dm-product-card:hover .dm-card-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Cuerpo de la tarjeta */
+.dm-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dm-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+  min-height: 2.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dm-card-desc {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Selector Dinámico (Variantes) */
+.dm-variant-group {
+  margin-bottom: 1.15rem;
+  background-color: var(--dm-primary-soft);
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #DCE8D3;
+}
+
+.dm-variant-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--dm-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dm-variant-select {
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1F2937;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--dm-primary);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: var(--dm-transition);
+}
+
+.dm-variant-select:focus {
+  box-shadow: 0 0 0 3px var(--dm-primary-glow);
+  border-color: var(--dm-primary-dark);
+}
+
+/* Bloque Inferior: Precio y Botón WhatsApp */
+.dm-card-footer-box {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--dm-border-color);
+}
+
+.dm-price-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9CA3AF;
+  letter-spacing: 0.03em;
+}
+
+.dm-price-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--dm-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+/* Botón Pedir por WhatsApp */
+.btn-whatsapp-order {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: #25D366;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.925rem;
+  padding: 0.65rem 1rem;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  transition: var(--dm-transition);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp-order:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.38);
+  color: #FFFFFF !important;
+}
+
+.btn-whatsapp-order i {
+  font-size: 1.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Ajustes Responsivos SOLO para Móviles (Media Queries <= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* 1. Ocultar descripción general debajo del título */
+  .dm-products-header p {
+    display: none !important;
+  }
+  
+  .dm-products-header {
+    padding: 2.25rem 0 1.5rem;
+  }
+  
+  .dm-products-header h1 {
+    font-size: 1.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .dm-filter-bar {
+    margin-top: 1rem;
+    gap: 0.35rem;
+  }
+
+  .dm-filter-btn {
+    font-size: 0.775rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* 2. Cuadrícula de 2 columnas ajustada con espaciado óptimo */
+  #productsGrid {
+    --bs-gutter-x: 0.65rem;
+    --bs-gutter-y: 0.75rem;
+  }
+
+  /* 3. Simplificar las tarjetas de producto en el celular */
+  .dm-card-desc {
+    display: none !important;
+  }
+
+  .dm-product-card {
+    border-radius: 14px;
+  }
+
+  .dm-card-img-wrapper {
+    height: 145px;
+    padding: 0.65rem;
+  }
+
+  .dm-card-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .dm-card-body {
+    padding: 0.75rem 0.65rem;
+  }
+
+  .dm-card-title {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    min-height: auto;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Selectores de variantes compactos para 2 columnas */
+  .dm-variant-group {
+    padding: 0.4rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .dm-variant-label {
+    font-size: 0.68rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .dm-variant-select {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 6px;
+  }
+
+  .dm-card-footer-box {
+    padding-top: 0.5rem;
+  }
+
+  .dm-price-label {
+    font-size: 0.65rem;
+  }
+
+  .dm-price-value {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .dm-price-value.is-empty {
+    font-size: 0.775rem;
+    color: #9CA3AF !important;
+  }
+
+  /* Botón de WhatsApp estilizado para tarjeta compacta */
+  .btn-whatsapp-order {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.5rem;
+    gap: 0.3rem;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .btn-whatsapp-order i {
+    font-size: 0.95rem;
+  }
+
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>dmbalanceados | Nutrición y Balance para tus Animales</title>
+  <meta name="description" content="dmbalanceados - Especialistas en alimentos balanceados de alta calidad para animales. Nutrición confiable, distribución y asesoramiento.">
+  <meta name="keywords" content="dmbalanceados, alimentos balanceados, nutrición animal, forrajes, alimento mascotas, campo">
+  <meta name="theme-color" content="#395F0A">
+
+  <!-- ======================================================================
+       Favicons y Manifiesto de Aplicación Web (img/)
+       ====================================================================== -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="img/site.webmanifest">
+
+  <!-- ======================================================================
+       Fuentes de Google Fonts (Plus Jakarta Sans)
+       ====================================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ======================================================================
+       Framework CSS: Bootstrap 5.3 y Bootstrap Icons
+       ====================================================================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- ======================================================================
+       Hojas de Estilos del Proyecto (General y Específica de Index)
+       ====================================================================== -->
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       TOP BAR (Datos de contacto rápido)
+       ====================================================================== -->
+  <div class="dm-topbar d-none d-md-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-4">
+          <span><i class="bi bi-clock me-1"></i> Lunes a Sábados: 07:30 - 12:00 y 13:30 - 18:00 hs</span>
+          <span><i class="bi bi-geo-alt me-1"></i> San José Obrero &bull; Primero de Marzo &bull; Arroyos y Esteros</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:0984088637" class="text-decoration-none"><i class="bi bi-telephone-fill me-1"></i> 0984 088 637</a>
+          <span class="opacity-50">|</span>
+          <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer" class="text-decoration-none"><i class="bi bi-whatsapp me-1 text-success"></i> WhatsApp: 0984 088 637</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       HEADER / NAVBAR PRINCIPAL
+       ====================================================================== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg dm-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Logo de la marca -->
+        <a class="navbar-brand dm-navbar-brand" href="index.html" aria-label="DMBALANCEADOS inicio">
+          <img src="img/logodm.jpeg" alt="Logo DMBALANCEADOS" class="brand-logo" onerror="this.style.display='none'">
+          <span class="brand-text">DMBALANCEADOS</span>
+        </a>
+
+        <!-- Botón Toggler Responsive para móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dmNavbarCollapse" aria-controls="dmNavbarCollapse" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces de Navegación -->
+        <div class="collapse navbar-collapse" id="dmNavbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ubicacion">Ubicación</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-dm-primary btn-sm px-3" href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> Pedir al WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL
+       ====================================================================== -->
+  <main id="inicio">
+    <!-- ======================================================================
+         1. HERO SECTION (Bienvenida, Identidad y Propuesta de Valor)
+         ====================================================================== -->
+    <section class="dm-hero" id="inicio">
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center">
+          
+          <!-- Mensaje de Bienvenida y Acciones -->
+          <div class="col-lg-10 col-xl-9">
+            <div class="dm-hero-subtitle mb-3">
+              <i class="bi bi-patch-check-fill"></i> Nutrición & Crianza Animal
+            </div>
+            
+            <h1 class="dm-hero-title mb-3">
+              Soluciones integrales para la <span class="highlight">alimentación y crianza</span> de tus animales.
+            </h1>
+            
+            <p class="dm-hero-desc mb-4">
+              En <strong>DM Balanceados</strong> acompañamos a productores, criadores y familias con las mejores opciones en nutrición animal, asesoramiento cercano y productos de máxima calidad.
+            </p>
+            
+            <div class="d-flex flex-wrap gap-3 mb-2">
+              <a href="#quienes-somos" class="btn btn-dm-primary px-4 py-2">
+                <i class="bi bi-info-circle-fill"></i> Conocé Nuestra Historia
+              </a>
+              <a href="productos.html" class="btn btn-dm-outline px-4 py-2">
+                <i class="bi bi-grid-fill"></i> Ver Catálogo
+              </a>
+              <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer" class="btn btn-light border px-3 py-2 text-dark">
+                <i class="bi bi-whatsapp text-success me-1"></i> Contactar
+              </a>
+            </div>
+
+            <!-- Métricas / Datos Clave de Confianza -->
+            <div class="row dm-hero-stats g-3">
+              <div class="col-4">
+                <div class="dm-stat-number">2023</div>
+                <div class="dm-stat-label">Año de Fundación</div>
+              </div>
+              <div class="col-4">
+                <div class="dm-stat-number">3</div>
+                <div class="dm-stat-label">Locales Comerciales</div>
+              </div>
+              <div class="col-4">
+                <div class="dm-stat-number">100%</div>
+                <div class="dm-stat-label">Compromiso & Calidad</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. SECCIÓN QUIÉNES SOMOS (Texto Institucional & Presencia)
+         ====================================================================== -->
+    <section class="dm-about-section" id="quienes-somos">
+      <div class="container">
+        
+        <!-- Encabezado de la sección -->
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="dm-section-badge">Nuestra Trayectoria</span>
+            <h2 class="dm-section-title mb-3">Quiénes Somos</h2>
+            <div class="mx-auto" style="width: 60px; height: 3.5px; background-color: var(--dm-primary); border-radius: 2px;"></div>
+          </div>
+        </div>
+
+        <!-- Fila Principal: Texto Oficial y Tarjeta de Compromiso -->
+        <div class="row align-items-center g-5 mb-5">
+          
+          <!-- Bloque de Texto Institucional con Formato Tipográfico -->
+          <div class="col-lg-7">
+            <div class="pe-lg-3">
+              <p class="dm-about-text">
+                <strong>DM Balanceados</strong> es una empresa fundada en <strong>2023</strong> por <strong>Diego Martínez</strong> y su hermano <strong>Adrián Martínez</strong>, con el propósito de ofrecer soluciones para la alimentación y crianza de animales.
+              </p>
+              
+              <p class="dm-about-text">
+                La empresa cuenta con locales en <strong>San José Obrero</strong>, <strong>Primero de Marzo</strong> y <strong>Arroyos y Esteros</strong>, donde ofrece balanceados y productos destinados a distintas especies animales.
+              </p>
+              
+              <p class="dm-about-text mb-4">
+                Con el compromiso de brindar variedad de productos y una buena atención, <strong>DM Balanceados</strong> busca seguir creciendo y mejorar sus servicios para satisfacer las necesidades de sus clientes. Además, contamos con servicio de delivery para llevar nuestros productos directamente a tu puerta.
+              </p>
+
+              <!-- Mención a los Fundadores -->
+              <div class="p-3 bg-light rounded-4 border d-flex align-items-center gap-3">
+                <div class="rounded-circle d-flex align-items-center justify-content-center bg-white shadow-sm text-success" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-dark">Diego Martínez & Adrián Martínez</div>
+                  <div class="small text-muted">Fundadores y Dirección General &bull; Desde 2023</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloque Destacado: Compromiso y Calidad -->
+          <div class="col-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-4 border h-100 d-flex flex-column justify-content-center shadow-sm">
+              <div class="d-inline-flex align-items-center gap-2 text-success fw-bold small text-uppercase mb-3">
+                <i class="bi bi-shield-check fs-5"></i> Calidad & Confianza
+              </div>
+              <h3 class="h4 fw-bold text-dark mb-3">Compromiso DM Balanceados</h3>
+              <p class="text-secondary mb-4">
+                Trabajamos junto a productores y familias para brindar la mejor alimentación y cuidado animal, asegurando productos confiables y una atención cálida y eficiente.
+              </p>
+              <ul class="list-unstyled mb-4 d-flex flex-column gap-2 text-secondary small">
+                <li><i class="bi bi-check2-circle text-success me-2 fs-6"></i> Variedad para múltiples especies animales</li>
+                <li><i class="bi bi-check2-circle text-success me-2 fs-6"></i> Asesoramiento cercano y buena atención</li>
+                <li><i class="bi bi-check2-circle text-success me-2 fs-6"></i> Presencia en 3 localidades estratégicas</li>
+              </ul>
+              <div>
+                <a href="#ubicacion" class="btn btn-dm-primary btn-sm rounded-pill px-3 py-2">
+                  <i class="bi bi-geo-alt-fill"></i> Conocer Nuestras Sucursales
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Fila de Presencia Territorial: Los 3 Locales Comerciales -->
+        <div class="row g-4 pt-2">
+          <div class="col-12 mb-2">
+            <h3 class="h4 fw-bold text-dark">
+              <i class="bi bi-shop me-2 text-success"></i>Nuestros Puntos de Venta
+            </h3>
+            <p class="text-muted small mb-0">Encontranos en nuestras 3 sucursales estratégicas:</p>
+          </div>
+
+          <!-- Local 1: San José Obrero -->
+          <div class="col-md-4">
+            <a href="https://maps.app.goo.gl/VQvQ1TM4NtziWtEN6" target="_blank" rel="noopener noreferrer" class="dm-feature-box text-decoration-none">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="dm-feature-icon mb-0">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill small">
+                  <i class="bi bi-check-circle me-1"></i> Sucursal Activa
+                </span>
+              </div>
+              <h4 class="dm-feature-title">San José Obrero</h4>
+              <p class="dm-feature-desc">
+                Local comercial con stock completo de alimentos balanceados, suplementos y atención especializada.
+              </p>
+              <div class="dm-feature-action mt-auto pt-2">
+                <span>Ver en Google Maps</span>
+                <i class="bi bi-box-arrow-up-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Local 2: Primero de Marzo -->
+          <div class="col-md-4">
+            <a href="https://maps.app.goo.gl/jB23EHsoYXMemDa96" target="_blank" rel="noopener noreferrer" class="dm-feature-box text-decoration-none">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="dm-feature-icon mb-0">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill small">
+                  <i class="bi bi-check-circle me-1"></i> Sucursal Activa
+                </span>
+              </div>
+              <h4 class="dm-feature-title">Primero de Marzo</h4>
+              <p class="dm-feature-desc">
+                Amplia variedad de productos destinados a distintas especies animales, con atención ágil y personalizada.
+              </p>
+              <div class="dm-feature-action mt-auto pt-2">
+                <span>Ver en Google Maps</span>
+                <i class="bi bi-box-arrow-up-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Local 3: Arroyos y Esteros -->
+          <div class="col-md-4">
+            <a href="https://maps.app.goo.gl/CAYJqabkkzUij7mC6" target="_blank" rel="noopener noreferrer" class="dm-feature-box text-decoration-none">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="dm-feature-icon mb-0">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded-pill small">
+                  <i class="bi bi-check-circle me-1"></i> Sucursal Activa
+                </span>
+              </div>
+              <h4 class="dm-feature-title">Arroyos y Esteros</h4>
+              <p class="dm-feature-desc">
+                Punto de distribución y venta de balanceados para el cuidado, alimentación y desarrollo de tus animales.
+              </p>
+              <div class="dm-feature-action mt-auto pt-2">
+                <span>Ver en Google Maps</span>
+                <i class="bi bi-box-arrow-up-right"></i>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección Productos (Ancla para navegación) -->
+    <section id="productos" class="py-5" style="background-color: var(--dm-bg-light);">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <h2 class="fw-bold mb-2" style="color: var(--dm-primary);">Nuestras Líneas de Productos</h2>
+          <p class="text-muted">Cubrimos todas las necesidades alimenticias con variedades específicas.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+              <div class="mx-auto mb-3 text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; background-color: var(--dm-primary);">
+                <i class="bi bi-shield-shaded fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold">Mascotas</h3>
+              <p class="text-muted small">Alimentos para perros y gatos en todas sus etapas de vida: cachorros, adultos y senior.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+              <div class="mx-auto mb-3 text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; background-color: var(--dm-primary);">
+                <i class="bi bi-feather fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold">Aves y Granja</h3>
+              <p class="text-muted small">Fórmulas específicas para ponedoras, pollos parrilleros, conejos y animales de granja.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+              <div class="mx-auto mb-3 text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; background-color: var(--dm-primary);">
+                <i class="bi bi-flower2 fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold">Ganadería y Equinos</h3>
+              <p class="text-muted small">Concentrados, sales minerales y raciones balanceadas de alto rendimiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER GENERAL (Paleta Verde #395F0A y Blanco + Google Maps)
+       ====================================================================== -->
+  <footer class="dm-footer" id="contacto">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        
+        <!-- Columna 1: Marca, descripción y redes -->
+        <div class="col-lg-4 col-md-6">
+          <div class="dm-footer-brand">
+            <img src="img/logodm.jpeg" alt="Logo DMBALANCEADOS" onerror="this.style.display='none'">
+            <span class="brand-name">DMBALANCEADOS</span>
+          </div>
+          <p class="dm-footer-text">
+            Comprometidos con la nutrición y el cuidado integral de tus animales. Calidad, confianza y asesoramiento cercano en cada entrega.
+          </p>
+          <div class="dm-social-links">
+            <a href="https://www.facebook.com/share/1N8KYf6UJa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="dm-social-btn" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer" class="dm-social-btn" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos de Navegación -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="dm-footer-title">Navegación</h4>
+          <ul class="dm-footer-links">
+            <li><a href="#inicio"><i class="bi bi-chevron-right small"></i> Inicio</a></li>
+            <li><a href="#quienes-somos"><i class="bi bi-chevron-right small"></i> Quiénes Somos</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right small"></i> Productos</a></li>
+            <li><a href="galeria.html"><i class="bi bi-chevron-right small"></i> Galería</a></li>
+            <li><a href="#ubicacion"><i class="bi bi-chevron-right small"></i> Ubicación</a></li>
+            <li><a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer"><i class="bi bi-chevron-right small"></i> Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="dm-footer-title">Contacto</h4>
+          <ul class="dm-footer-contact">
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Locales en San José Obrero, Primero de Marzo y Arroyos y Esteros</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:0984088637">0984 088 637</a>
+            </li>
+            <li>
+              <i class="bi bi-whatsapp"></i>
+              <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer">0984 088 637</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:dmbalancedos@gmail.com">dmbalancedos@gmail.com</a>
+            </li>
+            <li>
+              <i class="bi bi-clock-fill"></i>
+              <span>Lun a Sáb: 07:30 a 12:00 y 13:30 a 18:00 hs</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Mapa Embebido de Google Maps -->
+        <div class="col-lg-3 col-md-6" id="ubicacion">
+          <h4 class="dm-footer-title">Ubicación</h4>
+          <p class="small text-white-50 mb-2">San José Obrero - Casa Central:</p>
+          <div class="dm-map-wrapper">
+            <!-- Ubicación exacta: DM BALANCEADOS - SAN JOSE OBRERO -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.811802607535!2d-56.9167553793429!3d-25.17115068359605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945e79eb6df4be09%3A0xcade6c4a9165d108!2sDM%20BALANCEADOS%20-%20SAN%20JOSE%20OBRERO!5e1!3m2!1sen!2spy!4v1792183264208!5m2!1sen!2spy" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              title="Ubicación DM BALANCEADOS - SAN JOSE OBRERO">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra inferior de Copyright -->
+      <div class="dm-footer-bottom text-center">
+        <p class="mb-0">
+          &copy; <span id="currentYear">2026</span> <strong>DMBALANCEADOS</strong>. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       SCRIPTS: Bootstrap 5.3 Bundle & Scripts Base
+       ====================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/general.js"></script>
+</body>
+</html>

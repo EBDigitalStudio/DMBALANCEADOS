@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Galería de Fotos - DMBALANCEADOS | Calidad y Compromiso</title>
+  <meta name="description" content="Conocé las instalaciones, locales comerciales, depósitos y móviles de entrega de DMBALANCEADOS en San José Obrero, Primero de Marzo y Arroyos y Esteros.">
+  <meta name="theme-color" content="#395F0A">
+
+  <!-- ======================================================================
+       Favicons e Iconos de Aplicación
+       ====================================================================== -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="img/site.webmanifest">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 y Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Hojas de Estilos: General y Específica de Galería -->
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/galeria.css">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       TOP BAR (Datos de contacto rápido)
+       ====================================================================== -->
+  <div class="dm-topbar d-none d-md-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-4">
+          <span><i class="bi bi-clock me-1"></i> Lunes a Sábados: 07:30 - 12:00 y 13:30 - 18:00 hs</span>
+          <span><i class="bi bi-geo-alt me-1"></i> San José Obrero &bull; Primero de Marzo &bull; Arroyos y Esteros</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:0984088637" class="text-decoration-none"><i class="bi bi-telephone-fill me-1"></i> 0984 088 637</a>
+          <span class="opacity-50">|</span>
+          <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer" class="text-decoration-none"><i class="bi bi-whatsapp me-1 text-success"></i> WhatsApp: 0984 088 637</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       HEADER / NAVBAR PRINCIPAL (Sticky con cierre automático en móvil)
+       ====================================================================== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg dm-navbar" id="mainNavbar">
+      <div class="container">
+        <!-- Logo de la marca -->
+        <a class="navbar-brand dm-navbar-brand" href="index.html" aria-label="DMBALANCEADOS inicio">
+          <img src="img/logodm.jpeg" alt="Logo DMBALANCEADOS" class="brand-logo" onerror="this.style.display='none'">
+          <span class="brand-text">DMBALANCEADOS</span>
+        </a>
+
+        <!-- Botón Toggler Responsive para móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dmNavbarCollapse" aria-controls="dmNavbarCollapse" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces de Navegación -->
+        <div class="collapse navbar-collapse" id="dmNavbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#quienes-somos">Quiénes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#ubicacion">Ubicación</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-dm-primary btn-sm px-3" href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> Pedir al WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL: GALERÍA DE FOTOS INTERACTIVA
+       ====================================================================== -->
+  <main id="galeria">
+
+    <!-- Encabezado de la Sección Galería -->
+    <section class="dm-gallery-header">
+      <div class="container">
+        <h1 class="dm-gallery-title">Nuestra Galería</h1>
+        <p class="dm-gallery-subtitle">
+          Recorré nuestras sucursales, infraestructura de almacenamiento, logística de entregas y novedades destacadas de DMBALANCEADOS.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contenedor Principal: Filtros y Cuadrícula -->
+    <section class="dm-gallery-container">
+      <div class="container">
+
+        <!-- Menú de Botones para Filtros -->
+        <div class="dm-filter-wrapper">
+          <ul class="dm-filter-nav">
+            <li>
+              <button type="button" class="dm-filter-btn active" data-filter="todos" aria-pressed="true">
+                <i class="bi bi-grid-fill"></i> Todos
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dm-filter-btn" data-filter="locales" aria-pressed="false">
+                <i class="bi bi-shop"></i> Locales
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dm-filter-btn" data-filter="depositos" aria-pressed="false">
+                <i class="bi bi-building"></i> Depósitos
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dm-filter-btn" data-filter="delivery" aria-pressed="false">
+                <i class="bi bi-truck"></i> Delivery
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dm-filter-btn" data-filter="flyers" aria-pressed="false">
+                <i class="bi bi-megaphone-fill"></i> Flyers
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cuadrícula (Grid) de las 12 Imágenes -->
+        <div class="dm-gallery-grid" id="galleryGrid">
+
+          <!-- ==================== LOCALES (3) ==================== -->
+          <!-- 1. Local Arroyos y Esteros -->
+          <div class="dm-gallery-item" data-categoria="locales">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/localarroyos.jpeg" alt="Sucursal Arroyos y Esteros" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Locales</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Sucursal Arroyos y Esteros</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Local Primero de Marzo -->
+          <div class="dm-gallery-item" data-categoria="locales">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/localprimero.jpeg" alt="Sucursal Primero de Marzo" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Locales</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Sucursal Primero de Marzo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Local San José Obrero -->
+          <div class="dm-gallery-item" data-categoria="locales">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/localsjo.png" alt="Sucursal San José Obrero" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Locales</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Casa Central - San José Obrero</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== DEPÓSITOS (3) ==================== -->
+          <!-- 4. Depósito 1 -->
+          <div class="dm-gallery-item" data-categoria="depositos">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/deposito1.jpeg" alt="Almacén de Balanceados 1" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Depósitos</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Depósito Central - Stock y Estiba</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Depósito 2 -->
+          <div class="dm-gallery-item" data-categoria="depositos">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/deposito2.jpeg" alt="Almacén de Balanceados 2" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Depósitos</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Almacenamiento de Granos y Materias Primas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Depósito 3 -->
+          <div class="dm-gallery-item" data-categoria="depositos">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/deposito3.jpeg" alt="Almacén de Balanceados 3" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Depósitos</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Control de Calidad y Carga</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== DELIVERY (3) ==================== -->
+          <!-- 7. Delivery 1 -->
+          <div class="dm-gallery-item" data-categoria="delivery">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/delivery1.jpeg" alt="Móvil de Reparto y Logística 1" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Delivery</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Flota de Reparto - Unidad de Carga</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Delivery 2 -->
+          <div class="dm-gallery-item" data-categoria="delivery">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/delivery2.jpeg" alt="Móvil de Reparto y Logística 2" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Delivery</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Logística en Ruta hacia Clientes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Delivery 3 -->
+          <div class="dm-gallery-item" data-categoria="delivery">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/delivery3.jpeg" alt="Móvil de Reparto y Logística 3" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Delivery</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Entregas Directas a Granjas y Tambos</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== FLYERS (3) ==================== -->
+          <!-- 10. Flyer 1 -->
+          <div class="dm-gallery-item" data-categoria="flyers">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/flyer1.jpeg" alt="Flyer Promocional 1" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Flyers</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Novedades y Líneas de Nutrición</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Flyer 2 -->
+          <div class="dm-gallery-item" data-categoria="flyers">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/flyer2.jpeg" alt="Flyer Promocional 2" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Flyers</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Promociones en Balanceados Especiales</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Flyer 3 -->
+          <div class="dm-gallery-item" data-categoria="flyers">
+            <div class="dm-gallery-thumb-wrapper">
+              <img src="img/galeria/flyer3.jpeg" alt="Flyer Promocional 3" class="dm-gallery-img" loading="lazy">
+              <div class="dm-gallery-overlay">
+                <span class="dm-gallery-badge">Flyers</span>
+                <div class="dm-gallery-action">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <p class="dm-gallery-caption">Campaña de Atención y Asesoramiento</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       ESTRUCTURA HTML OCULTA PARA EL LIGHTBOX (MODAL DE AMPLIACIÓN)
+       ====================================================================== -->
+  <div id="dmLightbox" class="dm-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" id="dmLightboxClose" class="dm-lightbox-close" aria-label="Cerrar vista previa">&times;</button>
+    <div class="dm-lightbox-content">
+      <img id="dmLightboxImg" class="dm-lightbox-img" src="" alt="Imagen ampliada">
+      <div id="dmLightboxCaption" class="dm-lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       FOOTER GENERAL (Mismo mapa y enlaces actualizados)
+       ====================================================================== -->
+  <footer class="dm-footer" id="contacto">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        
+        <!-- Columna 1: Marca, descripción y redes -->
+        <div class="col-lg-4 col-md-6">
+          <div class="dm-footer-brand">
+            <img src="img/logodm.jpeg" alt="Logo DMBALANCEADOS" onerror="this.style.display='none'">
+            <span class="brand-name">DMBALANCEADOS</span>
+          </div>
+          <p class="dm-footer-text">
+            Comprometidos con la nutrición y el cuidado integral de tus animales. Soluciones confiables y asesoramiento cercano en cada entrega.
+          </p>
+          <div class="dm-social-links">
+            <a href="https://www.facebook.com/share/1N8KYf6UJa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="dm-social-btn" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer" class="dm-social-btn" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos de Navegación -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="dm-footer-title">Navegación</h4>
+          <ul class="dm-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Inicio</a></li>
+            <li><a href="index.html#quienes-somos"><i class="bi bi-chevron-right small"></i> Quiénes Somos</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right small"></i> Productos</a></li>
+            <li><a href="galeria.html"><i class="bi bi-chevron-right small"></i> Galería</a></li>
+            <li><a href="index.html#ubicacion"><i class="bi bi-chevron-right small"></i> Ubicación</a></li>
+            <li><a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer"><i class="bi bi-chevron-right small"></i> Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="dm-footer-title">Contacto</h4>
+          <ul class="dm-footer-contact">
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Locales en San José Obrero, Primero de Marzo y Arroyos y Esteros</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:0984088637">0984 088 637</a>
+            </li>
+            <li>
+              <i class="bi bi-whatsapp"></i>
+              <a href="https://wa.me/595984088637" target="_blank" rel="noopener noreferrer">0984 088 637</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:dmbalancedos@gmail.com">dmbalancedos@gmail.com</a>
+            </li>
+            <li>
+              <i class="bi bi-clock-fill"></i>
+              <span>Lun a Sáb: 07:30 a 12:00 y 13:30 a 18:00 hs</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Mapa Embebido de Google Maps -->
+        <div class="col-lg-3 col-md-6" id="ubicacion">
+          <h4 class="dm-footer-title">Ubicación</h4>
+          <p class="small text-white-50 mb-2">San José Obrero - Casa Central:</p>
+          <div class="dm-map-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.811802607535!2d-56.9167553793429!3d-25.17115068359605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945e79eb6df4be09%3A0xcade6c4a9165d108!2sDM%20BALANCEADOS%20-%20SAN%20JOSE%20OBRERO!5e1!3m2!1sen!2spy!4v1792183264208!5m2!1sen!2spy" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de ubicación de DM BALANCEADOS en San José Obrero">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra inferior de Copyright -->
+      <div class="dm-footer-bottom text-center">
+        <p class="mb-0">
+          &copy; <span id="currentYear">2026</span> <strong>DMBALANCEADOS</strong>. Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       SCRIPTS: Bootstrap 5.3, General y Galería
+       ====================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/general.js"></script>
+  <script src="js/galeria.js"></script>
+</body>
+</html>

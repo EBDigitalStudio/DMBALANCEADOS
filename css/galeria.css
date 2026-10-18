@@ -1,0 +1,366 @@
+/* ==========================================================================
+   dmbalanceados - Estilos de la Galería (css/galeria.css)
+   Paleta principal: Verde (#395F0A) y Blanco (#FFFFFF)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Encabezado de la Galería
+   -------------------------------------------------------------------------- */
+.dm-gallery-header {
+  padding: 3rem 0 2rem;
+  background: linear-gradient(180deg, #F9FAF7 0%, #FFFFFF 100%);
+  text-align: center;
+  border-bottom: 1px solid var(--dm-border-color, #E2E8DE);
+}
+
+.dm-gallery-title {
+  color: var(--dm-primary, #395F0A);
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.dm-gallery-subtitle {
+  color: var(--dm-text-muted, #6B7280);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Menú de Filtros
+   -------------------------------------------------------------------------- */
+.dm-filter-wrapper {
+  padding: 2rem 0 1rem;
+}
+
+.dm-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dm-filter-btn {
+  background-color: var(--dm-white, #FFFFFF);
+  color: var(--dm-text-main, #1F2937);
+  border: 1.5px solid var(--dm-border-color, #E2E8DE);
+  padding: 0.55rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.dm-filter-btn:hover {
+  border-color: var(--dm-primary, #395F0A);
+  color: var(--dm-primary, #395F0A);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(57, 95, 10, 0.1);
+}
+
+.dm-filter-btn.active {
+  background-color: var(--dm-primary, #395F0A);
+  border-color: var(--dm-primary, #395F0A);
+  color: var(--dm-white, #FFFFFF);
+  box-shadow: 0 4px 14px rgba(57, 95, 10, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   3. Cuadrícula de la Galería (CSS Grid: 3 en Desktop, 2 en Móvil)
+   -------------------------------------------------------------------------- */
+.dm-gallery-container {
+  padding: 1.5rem 0 4.5rem;
+}
+
+/* Vista de Escritorio: Exactamente 3 imágenes por fila */
+.dm-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+/* Vista Móvil (Responsive <= 768px): Exactamente 2 imágenes por fila */
+@media (max-width: 768px) {
+  .dm-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Tarjetas e Imágenes de la Galería (Proporciones Completas sin Recortes)
+   -------------------------------------------------------------------------- */
+.dm-gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #F8FAF6;
+  border: 1px solid var(--dm-border-color, #E2E8DE);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              opacity 0.3s ease;
+}
+
+.dm-gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(57, 95, 10, 0.16);
+  border-color: var(--dm-primary, #395F0A);
+}
+
+/* Contenedor con altura uniforme y centrado para respetar proporciones originales */
+.dm-gallery-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #F8FAF6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+/* En celulares adaptamos la altura para las 2 columnas */
+@media (max-width: 768px) {
+  .dm-gallery-thumb-wrapper {
+    height: 190px;
+    padding: 0.35rem;
+  }
+}
+
+/* Imagen sin recortes: Proporciones completas con object-fit: contain */
+.dm-gallery-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Garantiza que la imagen se vea completa sin recortar nada */
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.dm-gallery-item:hover .dm-gallery-img {
+  transform: scale(1.04); /* Sutil zoom al pasar el cursor */
+}
+
+/* Overlay con icono y badge al hacer hover */
+.dm-gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(57, 95, 10, 0.8) 100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .dm-gallery-overlay {
+    padding: 0.75rem;
+  }
+}
+
+.dm-gallery-item:hover .dm-gallery-overlay {
+  opacity: 1;
+}
+
+.dm-gallery-badge {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--dm-primary, #395F0A);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .dm-gallery-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.55rem;
+  }
+}
+
+.dm-gallery-action {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 48px;
+  height: 48px;
+  background-color: var(--dm-white, #FFFFFF);
+  color: var(--dm-primary, #395F0A);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .dm-gallery-action {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+.dm-gallery-item:hover .dm-gallery-action {
+  transform: translateY(0);
+}
+
+.dm-gallery-caption {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .dm-gallery-caption {
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+}
+
+/* Animación de filtrado suave */
+.dm-gallery-item.is-hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Modal Lightbox (Pantalla Completa)
+   -------------------------------------------------------------------------- */
+.dm-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(5px);
+  z-index: 2000; /* Supera al Navbar (z-index: 1030) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dm-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Botón de Cierre "X" */
+.dm-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 2010;
+  box-sizing: border-box;
+}
+
+.dm-lightbox-close:hover {
+  background-color: var(--dm-primary, #395F0A);
+  transform: scale(1.1);
+}
+
+/* Mejor ubicación y tamaño de la "X" en versión móvil */
+@media (max-width: 768px) {
+  .dm-lightbox-close {
+    top: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.85rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    z-index: 2020;
+  }
+}
+
+/* Contenedor e Imagen dentro del Lightbox */
+.dm-lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-lightbox-img {
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Muestra la foto completa sin cortes */
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transform: scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.dm-lightbox.active .dm-lightbox-img {
+  transform: scale(1);
+}
+
+.dm-lightbox-caption {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.85rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}

@@ -1,0 +1,277 @@
+/* ==========================================================================
+   dmbalanceados - Estilos Específicos de la Portada (css/index.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Hero Section Estilizada
+   -------------------------------------------------------------------------- */
+.dm-hero {
+  position: relative;
+  background: linear-gradient(135deg, #F8FAF5 0%, #FFFFFF 50%, #EDF4E7 100%);
+  padding: 5rem 0 4.5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--dm-border-color);
+}
+
+/* Efectos de fondo sutiles */
+.dm-hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(57, 95, 10, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dm-hero-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--dm-primary-soft);
+  color: var(--dm-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.15rem;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.dm-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #111827;
+  letter-spacing: -0.03em;
+}
+
+.dm-hero-title .highlight {
+  color: var(--dm-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.dm-hero-desc {
+  font-size: 1.125rem;
+  color: #4B5563;
+  line-height: 1.7;
+}
+
+/* Métricas destacadas en el Hero */
+.dm-hero-stats {
+  border-top: 1px solid var(--dm-border-color);
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dm-stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--dm-primary);
+  line-height: 1;
+}
+
+.dm-stat-label {
+  font-size: 0.825rem;
+  color: #6B7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.25rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   2. Sección "Quiénes Somos"
+   -------------------------------------------------------------------------- */
+.dm-about-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.dm-section-badge {
+  color: var(--dm-primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.dm-section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+/* Párrafos del texto institucional con excelente legibilidad */
+.dm-about-text {
+  font-size: 1.075rem;
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+.dm-about-text strong {
+  color: var(--dm-primary-dark);
+  font-weight: 700;
+}
+
+/* Tarjetas de sucursales / Puntos de Venta (Clickeables a Google Maps) */
+.dm-feature-box {
+  background-color: #FBFDF9;
+  border: 1px solid var(--dm-border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              background-color 0.25s ease;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dm-feature-box:hover {
+  background-color: #FFFFFF;
+  border-color: var(--dm-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(57, 95, 10, 0.12);
+}
+
+.dm-feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: var(--dm-primary-soft);
+  color: var(--dm-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dm-feature-box:hover .dm-feature-icon {
+  background-color: var(--dm-primary);
+  color: #FFFFFF;
+}
+
+.dm-feature-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.dm-feature-box:hover .dm-feature-title {
+  color: var(--dm-primary);
+}
+
+.dm-feature-desc {
+  font-size: 0.925rem;
+  color: #6B7280;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Indicador de acción para abrir en Google Maps */
+.dm-feature-action {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dm-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.dm-feature-box:hover .dm-feature-action {
+  gap: 0.65rem;
+  color: var(--dm-primary-dark);
+}
+
+/* Badges de las 3 localidades */
+.dm-locations-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.dm-location-pill {
+  background-color: #FFFFFF;
+  color: var(--dm-primary);
+  border: 1px solid var(--dm-border-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.25s ease;
+}
+
+.dm-location-pill:hover {
+  background-color: var(--dm-primary);
+  color: #FFFFFF;
+  border-color: var(--dm-primary);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   3. Adaptabilidad Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .dm-hero {
+    padding: 3.5rem 0 3rem;
+  }
+  
+  .dm-about-section {
+    padding: 4rem 0;
+  }
+
+  .dm-hero-stats {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dm-hero-title {
+    font-size: 2rem;
+  }
+
+  .dm-about-text {
+    font-size: 1rem;
+  }
+
+  .dm-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .dm-stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  .dm-hero .btn {
+    max-width: 100%;
+  }
+}
